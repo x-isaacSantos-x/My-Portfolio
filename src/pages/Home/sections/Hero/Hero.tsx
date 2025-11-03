@@ -10,7 +10,21 @@ const Hero = () => {
     backgroundColor: theme.palette.primary.main,
     height: "100vh",
     display:"flex",
-    alignItems: "center"
+    alignItems: "center",
+    [theme.breakpoints.up('xs')]: {
+            display: "block",
+            padding: "20px",
+            paddingTop: "100px",
+            paddingBottom: "40px",
+        },
+
+    [theme.breakpoints.up('md')]: {
+            display: "block",
+            padding: "20px",
+            paddingTop: "0px",
+            paddingBottom: "40px",
+        },
+
   }));
 
 
