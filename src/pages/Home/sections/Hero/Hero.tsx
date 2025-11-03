@@ -12,17 +12,11 @@ const Hero = () => {
     display:"flex",
     alignItems: "center",
     [theme.breakpoints.up('xs')]: {
-            display: "block",
-            padding: "20px",
             paddingTop: "100px",
-            paddingBottom: "40px",
         },
 
     [theme.breakpoints.up('md')]: {
-            display: "block",
-            padding: "20px",
             paddingTop: "0px",
-            paddingBottom: "40px",
         },
 
   }));
@@ -30,7 +24,7 @@ const Hero = () => {
 
 
   const StyledImg = styled("img")(({theme}) => ({
-    width: "80%",
+    width: "75%",
     borderRadius: "50%",
     border: `1px solid ${theme.palette.primary.contrastText}`
   }));
@@ -74,14 +68,14 @@ const Hero = () => {
             {/* Container dos botões */}
             <Grid container spacing={3} justifyContent="center" sx={{ mt: 2 }} pt={3}>
               <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
-                <StyledButton>
+                <StyledButton onClick={()=> console.log("download")}>
                   <DownloadIcon />
                   <Typography>Download CV</Typography>
                 </StyledButton>
               </Grid>
 
               <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent="center" >
-                <StyledButton>
+                <StyledButton onClick={()=> console.log("Oi, sou o isaac")}>
                   <MailOutlineIcon />
                   <Typography>Fale Comigo</Typography>
                 </StyledButton>
